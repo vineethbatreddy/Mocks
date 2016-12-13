@@ -15,34 +15,65 @@ Sandbox.define('/search/{masterId}', 'GET', function(req, res){
     res.status(Sandbox.config.http_success_status_code);
     
     var masterId = req.params.masterId;
-    var resp = '';
-    
-    
-    var last = masterId.substr(0, 1);
-    if (last == 0) {
-        lastPage = 'N';
-    }
-    if (last == 1) {
-        lastPage = 'Y';
-    }
-    var count = masterId.substr(1, masterId.length);
-    var limit = req.query.limit;
-    var offset = req.query.offset;
-    
-    resp = {
-        "data": {
-            "customers": [],
-            "paging": {
-                "limit": limit,
-                "lastPage": lastPage,
-                "resultBlockSize": "25",
-                "offset": offset
+    var cust = state.customer;
+    var resp = {
+            'data': {
+                'customers': [],
+                'paging': {
+                    'limit': '50',
+                    'lastPage': 'Y',
+                    'resultBlockSize': '25',
+                    'offset': '0'
+                }
             }
-        }
-    };
+        };;
     
-    for (i = 0; i < count; i++) {
-        resp.data.customers.push(state.customer);
+    if(masterId == '123') {
+        cust.cac = '123456789';
+        cust.customerAccount.firstName = 'John';
+        cust.customerAccount.lastName = 'Smith';
+        resp.data.customers.push(cust);
+    }
+    else if(masterId == '456') {
+        cust.cac = '456789123';
+        cust.customerAccount.firstName = 'Sandy';
+        cust.customerAccount.lastName = 'Steers';
+        cust.address[0].addressId = '50278642';
+        resp.data.customers.push(cust);
+    }
+    else if(masterId == '789') {
+        cust.cac = '789123456';
+        cust.customerAccount.firstName = 'Wilson';
+        cust.customerAccount.lastName = 'Will';
+        resp.data.customers.push(cust);
+    }
+    else {
+        var last = masterId.substr(0, 1);
+        if (last == 0) {
+            lastPage = 'N';
+        }
+        if (last == 1) {
+            lastPage = 'Y';
+        }
+        var count = masterId.substr(1, masterId.length);
+        var limit = req.query.limit;
+        var offset = req.query.offset;
+    
+        resp = {
+            'data': {
+                'customers': [],
+                'paging': {
+                    'limit': limit,
+                    'lastPage': lastPage,
+                    'resultBlockSize': '25',
+                    'offset': offset
+                }
+            }
+        };
+    
+        for (i = 0; i < count; i++) {
+            resp.data.customers.push(cust);
+        }    
     }
     
     res.json(resp);
