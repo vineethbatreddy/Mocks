@@ -17,37 +17,34 @@ Sandbox.define('/search/{masterId}', 'GET', function(req, res){
     var masterId = req.params.masterId;
     var cust = state.customer;
     var resp = {
-            'data': {
-                'customers': [],
-                'paging': {
-                    'limit': '50',
-                    'lastPage': 'Y',
-                    'resultBlockSize': '25',
-                    'offset': '0'
-                }
+        'data': {
+            'customers': [],
+            'paging': {
+                'limit': '50',
+                'lastPage': 'Y',
+                'resultBlockSize': '25',
+                'offset': '0'
             }
-        };;
+        }
+    };;
     
-    if(masterId == '123') {
+    if (masterId == '123') {
         cust.cac = '123456789';
         cust.customerAccount.firstName = 'John';
         cust.customerAccount.lastName = 'Smith';
         resp.data.customers.push(cust);
-    }
-    else if(masterId == '456') {
+    } else if (masterId == '456') {
         cust.cac = '456789123';
         cust.customerAccount.firstName = 'Sandy';
-        cust.customerAccount.lastName = 'Steers';
-        cust.address[0].addressId = '50278642';
+        cust.customerAccount.lastName = 'Steers'
         resp.data.customers.push(cust);
-    }
-    else if(masterId == '789') {
+    } else if (masterId == '789') {
         cust.cac = '789123456';
         cust.customerAccount.firstName = 'Wilson';
         cust.customerAccount.lastName = 'Will';
+        cust.address[0].addressId = '70278641';
         resp.data.customers.push(cust);
-    }
-    else {
+    } else {
         var last = masterId.substr(0, 1);
         if (last == 0) {
             lastPage = 'N';
@@ -73,7 +70,7 @@ Sandbox.define('/search/{masterId}', 'GET', function(req, res){
     
         for (i = 0; i < count; i++) {
             resp.data.customers.push(cust);
-        }    
+        }
     }
     
     res.json(resp);
