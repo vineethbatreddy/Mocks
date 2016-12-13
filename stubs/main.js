@@ -15,6 +15,9 @@ Sandbox.define('/search/{masterId}', 'GET', function(req, res){
     res.status(Sandbox.config.http_success_status_code);
     
     var masterId = req.params.masterId;
+    var resp = '';
+    
+    
     var last = masterId.substr(0, 1);
     if (last == 0) {
         lastPage = 'N';
@@ -26,7 +29,7 @@ Sandbox.define('/search/{masterId}', 'GET', function(req, res){
     var limit = req.query.limit;
     var offset = req.query.offset;
     
-    var resp = {
+    resp = {
         "data": {
             "customers": [],
             "paging": {
