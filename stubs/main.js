@@ -24,14 +24,14 @@ Sandbox.define('/search/{masterId}', 'GET', function(req, res){
         "customerAccount": {
             "preferredMethod": "eMail",
             "lastName": "AAFSASFASFFS",
-            "acn": "",
+            "acn": "000000019",
             "fraudFlag": "N",
             "driverLicenceNumber": "",
             "effectiveRetiredDate": "",
             "webAddress": "",
             "emailAddress": "vignesh.sekhar@team.telstra.com",
             "dataSovereignty": "",
-            "abn": "",
+            "abn": "784125495",
             "driverLicenceState": "",
             "title": "MS",
             "faxNumber": "",
@@ -151,8 +151,7 @@ Sandbox.define('/search/{masterId}', 'GET', function(req, res){
         var last = masterId.substr(0, 1);
         if (last == 0) {
             lastPage = 'N';
-        }
-        else {
+        } else {
             lastPage = 'Y';
         }
         var count = masterId.substr(1, masterId.length);
