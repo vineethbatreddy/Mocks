@@ -16,7 +16,7 @@ Sandbox.define('/search/{masterId}', 'GET', function(req, res){
     
     var masterId = req.params.masterId;
     
-    var cust = {
+    var cust_soletrader = {
         "location": "10009/14/1983KJFALJDL",
         "servicingOrgUnit": "RESSTD",
         "languagePreference": "English",
@@ -119,6 +119,109 @@ Sandbox.define('/search/{masterId}', 'GET', function(req, res){
         "premiumService": "N"
     };
     
+    var cust = {
+        "location": "10009/14/1983KJFALJDL",
+        "servicingOrgUnit": "RESSTD",
+        "languagePreference": "English",
+        "parentCidn": "",
+        "customerAccount": {
+            "preferredMethod": "eMail",
+            "lastName": "Non Sole Trader",
+            "acn": "000000019",
+            "fraudFlag": "N",
+            "driverLicenceNumber": "",
+            "effectiveRetiredDate": "",
+            "webAddress": "",
+            "emailAddress": "vignesh.sekhar@team.telstra.com",
+            "dataSovereignty": "",
+            "abn": "784125495",
+            "driverLicenceState": "",
+            "title": "MS",
+            "faxNumber": "",
+            "phoneNumber": "+610498765432",
+            "birthDate": "1983-09-14",
+            "accountUuid": "B1BBE86C-042B-4f38-9895-B59903DC22A1",
+            "firstName": "KJFALJDL"
+        },
+        "accountTrading": [{
+            "isPrimary": "",
+            "tradingName": ""
+        }],
+        "cac": "2021853471",
+        "marketSegment": "Consumer Unsegmented",
+        "customerManagedFlag": "N",
+        "accountStatus": "ACTIVE",
+        "createdDate": "2016-09-26T14:29:30+10:00",
+        "geographicalLocationCode": "3V",
+        "customerType": "Residential",
+        "customerSince": "2016-09-26",
+        "accountPortfolio": [{
+            "portfolioName": "",
+            "isPrimary": "",
+            "accountExecutiveLastName": "",
+            "portfolioCode": "",
+            "accountExecutivePhoneNumber": "",
+            "accountExecutiveFirstName": ""
+        }],
+        "lastUpdated": "2016-09-26T16:38:47+10:00",
+        "cidn": "4892206828",
+        "ultimateParentCidn": "",
+        "ownershipCode": "",
+        "businessUnit": "Consumer",
+        "category": {
+            "online": ""
+        },
+        "revenueOrganisationUnit": "CCU3V0",
+        "priorityAssist": "N",
+        "address": [{
+            "state": "VIC",
+            "streetTypeCode": "AVENUE",
+            "addressId": "50280321",
+            "statusCode": "CONFIRMED",
+            "streetTypeSuffixCode": "",
+            "postalCode": "3450",
+            "registeredPlan": "",
+            "streetNumberStart": "15",
+            "subAddress": {
+                "propertyName": "",
+                "privateStreetType": "",
+                "privateStreetName": "",
+                "details": [{
+                    "detailType": "",
+                    "value": "",
+                    "detailTypeCode": ""
+                }, {
+                    "detailType": "",
+                    "value": "",
+                    "detailTypeCode": ""
+                }],
+                "numberStart": "",
+                "buildingName": "",
+                "addressLines": ["15 ROBERTSON AVE,", "", ""],
+                "numberEnd": "",
+                "privateStreetTypeCode": ""
+            },
+            "streetType": "AVE",
+            "internationalState": "",
+            "isPrimary": "Y",
+            "status": "CO",
+            "streetNumberStartSuffix": "",
+            "streetName": "ROBERTSON",
+            "addressType": "CO",
+            "additionalInfo": "",
+            "country": "AUSTRALIA",
+            "internationalPostcode": "",
+            "addressTypeCode": "",
+            "streetTypeSuffix": "",
+            "streetNumberEnd": "",
+            "deliveryPointId": "30479498",
+            "streetNumberEndSuffix": "",
+            "locality": "CASTLEMAINE"
+        }],
+        "masterID": "10000143877",
+        "premiumService": "N"
+    };
+    
     var resp = {
         'data': {
             'customers': [],
@@ -147,7 +250,11 @@ Sandbox.define('/search/{masterId}', 'GET', function(req, res){
         cust.customerAccount.lastName = 'Will';
         cust.address[0].addressId = '70278641';
         resp.data.customers.push(cust);
-    } else {
+    } else if(masterId == '111') {
+        resp.data.customers.push(cust_soletrader);
+    } 
+    
+    else {
         var last = masterId.substr(0, 1);
         if (last == 0) {
             lastPage = 'N';
