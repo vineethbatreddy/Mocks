@@ -50,7 +50,7 @@ Sandbox.define('/search/{masterId}', 'GET', function(req, res){
         "accountStatus": "ACTIVE",
         "createdDate": "2016-09-26T14:29:30+10:00",
         "geographicalLocationCode": "3V",
-        "customerType": "Residential",
+        "customerType": "Sole Trader",
         "customerSince": "2016-09-26",
         "accountPortfolio": [{
             "portfolioName": "",
