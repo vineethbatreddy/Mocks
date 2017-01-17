@@ -23,7 +23,7 @@ Sandbox.define('/search/{masterId}', 'GET', function(req, res){
         "parentCidn": "",
         "customerAccount": {
             "preferredMethod": "eMail",
-            "lastName": "AAFSASFASFFS",
+            "lastName": "Sole Trader",
             "acn": "000000019",
             "fraudFlag": "N",
             "driverLicenceNumber": "",
@@ -250,11 +250,9 @@ Sandbox.define('/search/{masterId}', 'GET', function(req, res){
         cust.customerAccount.lastName = 'Will';
         cust.address[0].addressId = '70278641';
         resp.data.customers.push(cust);
-    } else if(masterId == '111') {
+    } else if (masterId == '111') {
         resp.data.customers.push(cust_soletrader);
-    } 
-    
-    else {
+    } else {
         var last = masterId.substr(0, 1);
         if (last == 0) {
             lastPage = 'N';
