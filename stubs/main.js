@@ -2916,11 +2916,14 @@ Sandbox.define('/getNBNSQStub','GET', function(req, res){
 })
 
 Sandbox.define('/ping','GET', function(req, res){
+    var moment = require('moment');
+    var currentTime = moment.locale('cs');
+    
     res.type(Sandbox.config.defaultResponseType);
     res.status(Sandbox.config.http_success_status_code);
     res.json({
         "status": "ok",
-        "date": system.now(),
+        "date": currentTime,
         "originating ip address": req.ip
     });
 })
