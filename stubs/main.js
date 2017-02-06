@@ -2618,7 +2618,7 @@ Sandbox.define('/managebilling/rest/validate', 'POST', function(req, res){
     res.type(Sandbox.config.defaultResponseType);
     
     // Set the status code of the response.
-    res.status(200);
+    res.status(Sandbox.config.http_success_status_code);
     
     if (req.body.Product.Owner.Party.ID == '0123456789123' && req.body.Product.Account.ID == '0123456789') {
     
