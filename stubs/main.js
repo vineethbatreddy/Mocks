@@ -2919,7 +2919,8 @@ Sandbox.define('/ping','GET', function(req, res){
     res.type(Sandbox.config.defaultResponseType);
     res.status(Sandbox.config.http_success_status_code);
     res.json({
-        "status": "ok"
+        "status": "ok",
+        "originating ip address": req.ip
     });
 })
 
