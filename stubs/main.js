@@ -2587,7 +2587,7 @@ Sandbox.define('/manageCustomer','POST', function(req, res){
     res.type(Sandbox.config.defaultResponseType);
     
     // Set the status code of the response.
-    res.status(400);
+    res.status(Sandbox.config.http_unsuccessful_status_code);
     
     // Send the response body.
     res.json({
