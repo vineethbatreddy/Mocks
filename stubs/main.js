@@ -2600,7 +2600,7 @@ Sandbox.define('/orderorchestration/rest/ordermanager/orders','POST', function(r
     res.type(Sandbox.config.defaultResponseType);
     
     // Set the status code of the response.
-    res.status(201);
+    res.status(Sandbox.config.http_created_status_code);
     
     // Send the response body.
     res.json({
