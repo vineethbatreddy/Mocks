@@ -2920,6 +2920,7 @@ Sandbox.define('/ping','GET', function(req, res){
     res.status(Sandbox.config.http_success_status_code);
     res.json({
         "status": "ok",
+        "date": now(),
         "originating ip address": req.ip
     });
 })
