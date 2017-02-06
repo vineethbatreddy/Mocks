@@ -288,7 +288,7 @@ Sandbox.define('/address-search/addresses','GET', function(req, res){
     res.type(Sandbox.config.defaultResponseType);
     
     // Set the status code of the response.
-    res.status(200);
+    res.status(http_success_status_code);
     
     // Send the response body.
     res.json({
