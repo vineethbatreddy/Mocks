@@ -2926,7 +2926,7 @@ Sandbox.define('/ping','GET', function(req, res){
 Sandbox.define('/MockService','POST', function(req, res){
     res.type(Sandbox.config.defaultResponseType);
     
-    res.status(202);
+    res.status(Sandbox.config.http_accepted_status_code);
     
     res.json({
         "status": "Accepted"
