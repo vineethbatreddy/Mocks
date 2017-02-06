@@ -2611,7 +2611,7 @@ Sandbox.define('/orderorchestration/rest/ordermanager/orders','POST', function(r
 Sandbox.define('/managebilling/rest/validate', 'POST', function(req, res){
     // Check the request, make sure it is a compatible type
     if (!req.is('application/json')) {
-        return res.send(400, 'Invalid content type, expected application/json');
+        return res.send(Sandbox.config.http_unsuccessful_status_code, 'Invalid content type, expected application/json');
     }
     
     // Set the type of response, sets the content type.
