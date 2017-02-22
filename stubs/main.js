@@ -2944,12 +2944,7 @@ Sandbox.define('/MockService','PUT', function(req, res){
     });
 })
 
-Sandbox.define('/OutboundMessageProcessor', 'POST', function(req, res) {
-    // Check the request, make sure it is a compatible type
-    if (!req.is('application/json')) {
-        return res.send(400, 'Invalid content type, expected application/json');
-    }
-    
+Sandbox.define('/OutboundMessageProcessor', 'POST', function(req, res){
     // Set the type of response, sets the content type.
     res.type('application/json');
     
@@ -2957,7 +2952,5 @@ Sandbox.define('/OutboundMessageProcessor', 'POST', function(req, res) {
     res.status(200);
     
     // Send the response body.
-    res.json({
-        "status": "ok"
-    });
+    res.json('<status>OK</status>');
 })
