@@ -2944,13 +2944,3 @@ Sandbox.define('/MockService','PUT', function(req, res){
     });
 })
 
-Sandbox.define('/OutboundMessageProcessor', 'POST', function(req, res){
-    // Set the type of response, sets the content type.
-    res.type('xml');
-    
-    // Set the status code of the response.
-    res.status(200);
-    
-    // Send the response body.
-    res.send('<status>OK</status>');
-})
