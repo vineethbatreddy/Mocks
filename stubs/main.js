@@ -2952,5 +2952,5 @@ Sandbox.define('/OutboundMessageProcessor', 'POST', function(req, res){
     res.status(200);
     
     // Send the response body.
-    res.json('<status>OK</status>');
+    res.xml('<status>OK</status>');
 })
