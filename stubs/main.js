@@ -2944,7 +2944,7 @@ Sandbox.define('/MockService','PUT', function(req, res){
     });
 })
 
-Sandbox.define('/','POST', function(req, res) {
+Sandbox.define('/OutboundMessageProcessor', 'POST', function(req, res) {
     // Check the request, make sure it is a compatible type
     if (!req.is('application/json')) {
         return res.send(400, 'Invalid content type, expected application/json');
