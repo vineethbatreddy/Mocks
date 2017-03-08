@@ -2943,10 +2943,10 @@ Sandbox.define('/MockService','PUT', function(req, res){
 
 Sandbox.define('/numberManagement/fnn','GET', function(req, res){
     // Set the type of response, sets the content type.
-    res.type('application/json');
+    res.type(Sandbox.config.default_response_type);
     
     // Set the status code of the response.
-    res.status(200);
+    res.status(Sandbox.config.http_success_status_code);
     
     // Send the response body.
     res.json({
