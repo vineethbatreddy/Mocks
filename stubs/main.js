@@ -9,7 +9,7 @@
 
 Sandbox.define('/search/{masterId}', 'GET', function(req, res){
     // Set the type of response, sets the content type.
-    res.type(Sandbox.config.defaultResponseType);
+    res.type(Sandbox.config.default_response_type);
     
     // Set the status code of the response.
     res.status(Sandbox.config.http_success_status_code);
@@ -285,7 +285,7 @@ Sandbox.define('/search/{masterId}', 'GET', function(req, res){
 
 Sandbox.define('/address-search/addresses','GET', function(req, res){
     // Set the type of response, sets the content type.
-    res.type(Sandbox.config.defaultResponseType);
+    res.type(Sandbox.config.default_response_type);
     
     // Set the status code of the response.
     res.status(http_success_status_code);
@@ -2576,7 +2576,7 @@ Sandbox.define('/address-search/addresses','GET', function(req, res){
 
 
 Sandbox.define('/dop/security/rest/loginservice','POST', function(req, res){
-    res.type(Sandbox.config.defaultResponseType);
+    res.type(Sandbox.config.default_response_type);
     res.status(Sandbox.config.http_success_status_code);
     
     res.send('{"access_token": "lFYpKM2LkokcsbzQFKfsMTiPeFcA", "expires_in": "3599"}');
@@ -2584,7 +2584,7 @@ Sandbox.define('/dop/security/rest/loginservice','POST', function(req, res){
 
 Sandbox.define('/manageCustomer','POST', function(req, res){
     // Set the type of response, sets the content type.
-    res.type(Sandbox.config.defaultResponseType);
+    res.type(Sandbox.config.default_response_type);
     
     // Set the status code of the response.
     res.status(Sandbox.config.http_unsuccessful_status_code);
@@ -2597,7 +2597,7 @@ Sandbox.define('/manageCustomer','POST', function(req, res){
 
 Sandbox.define('/orderorchestration/rest/ordermanager/orders','POST', function(req, res){
     // Set the type of response, sets the content type.
-    res.type(Sandbox.config.defaultResponseType);
+    res.type(Sandbox.config.default_response_type);
     
     // Set the status code of the response.
     res.status(Sandbox.config.http_created_status_code);
@@ -2615,7 +2615,7 @@ Sandbox.define('/managebilling/rest/validate', 'POST', function(req, res){
     }
     
     // Set the type of response, sets the content type.
-    res.type(Sandbox.config.defaultResponseType);
+    res.type(Sandbox.config.default_response_type);
     
     // Set the status code of the response.
     res.status(Sandbox.config.http_success_status_code);
@@ -2837,7 +2837,7 @@ Sandbox.define('/getNBNSQStub','GET', function(req, res){
     //}
     
     // Set the type of response, sets the content type.
-    res.type(Sandbox.config.defaultResponseType);
+    res.type(Sandbox.config.default_response_type);
     
     // Set the status code of the response.
     res.status(Sandbox.config.http_success_status_code);
@@ -2916,7 +2916,7 @@ Sandbox.define('/getNBNSQStub','GET', function(req, res){
 })
 
 Sandbox.define('/ping','GET', function(req, res){
-    res.type(Sandbox.config.defaultResponseType);
+    res.type(Sandbox.config.default_response_type);
     res.status(Sandbox.config.http_success_status_code);
     res.json({
         "status": "ok",
@@ -2925,7 +2925,7 @@ Sandbox.define('/ping','GET', function(req, res){
 })
 
 Sandbox.define('/MockService','POST', function(req, res){
-    res.type(Sandbox.config.defaultResponseType);
+    res.type(Sandbox.config.default_response_type);
     
     res.status(Sandbox.config.http_accepted_status_code);
     
@@ -2935,7 +2935,7 @@ Sandbox.define('/MockService','POST', function(req, res){
 })
 
 Sandbox.define('/MockService','PUT', function(req, res){
-    res.type(Sandbox.config.defaultResponseType);
+    res.type(Sandbox.config.default_response_type);
     
     res.status(Sandbox.config.http_accepted_status_code);
     
@@ -2960,7 +2960,7 @@ Sandbox.define('/numberManagement/fnn','GET', function(req, res){
             "status": "valid"
         }, {
             "fnn": "03 67683091",
-            "status": "valid"
+            "status": "Q"
         }, {
             "fnn": "03 67672191",
             "status": "valid"
@@ -2969,7 +2969,7 @@ Sandbox.define('/numberManagement/fnn','GET', function(req, res){
             "status": "valid"
         }, {
             "fnn": "03 90002091",
-            "status": "valid"
+            "status": "Q"
         }]
     });
 })
