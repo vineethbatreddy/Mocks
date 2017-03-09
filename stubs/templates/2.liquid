@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-16"?>
+<!--Author: 	BPMI CoE
+Date: 		10/10/2013
+IR#:			IR9694 - NBN Automated Appointments
+
+Description
+----------------
+An example of a QueryWorkforceAvailability response to querying possible NBN Co appointment slots in a reschedule scenario
+
+Scenario
+------------
+A query for NBN Co appointment slots returns the full 25 available slots for the consumer to choose from.  
+-->
+<SOAP-ENV:Envelope
+    xmlns:SOAP-ENV = "http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:xsd = "http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ma = "http://www.telstra.com/FieldWorkOrderManagement/ISL-FWOM/v1/FieldWorkOrderManagement.xsd"
+    xmlns:v1 = "http://www.telstra.com/OCIM/v1">
+    <SOAP-ENV:Header>
+        <ma:SoapHeader xmlns:ma = "http://www.telstra.com/FieldWorkOrderManagement/ISL-FWOM/v1/FieldWorkOrderManagement.xsd">
+            <ma:transactionID>bzKLHaTQPC5SNkVuGCNkCXzku5A</ma:transactionID>
+            <ma:transactionName>QueryWorkforceAvailabilityResponse</ma:transactionName>
+            <ma:sourceSystem>ISL-FUL</ma:sourceSystem>
+            <ma:targetSystem>CCB-RCRM SOC</ma:targetSystem>
+            <ma:serviceVersion>1.0</ma:serviceVersion>
+            <ma:timeStamp>2013-10-28T01:50:43.175Z</ma:timeStamp>
+            <ma:role></ma:role>
+        </ma:SoapHeader>
+    </SOAP-ENV:Header>
+    <SOAP-ENV:Body>
+        <ns1:queryWorkForceAvailabilityResponse xmlns:ns1 = "http://www.telstra.com/FieldWorkOrderManagement/ISL-FWOM/v1/FieldWorkOrderManagement.wsdl">
+            <queryWorkForceAvailabilityResponse>
+                <ma:WorkForceEvent>
+                    <v1:ProjectElementHasCalendarEntry>
+                        <v1:relationshipType>AvailableSlot</v1:relationshipType>
+                        <v1:CalendarEntry xsi:type = "v1:AppointmentEvent">
+                            <v1:SimpleTemporalExpression>
+                                <v1:timePeriod>
+                                    <v1:startUTCOffset>+10:00</v1:startUTCOffset>
+                                    <v1:endUTCOffset>+10:00</v1:endUTCOffset>
+                                    <v1:startDateTime>2012-04-16T18:00:00.0Z</v1:startDateTime>
+                                    <v1:endDateTime>2012-04-16T20:00:00.0Z</v1:endDateTime>
+                                </v1:timePeriod>
+                            </v1:SimpleTemporalExpression>
+                            <v1:appointmentSlotType>PM</v1:appointmentSlotType>
+                        </v1:CalendarEntry>
+                    </v1:ProjectElementHasCalendarEntry>
+                    <v1:ProjectElementHasCalendarEntry>
+                        <v1:relationshipType>AvailableSlot</v1:relationshipType>
+                        <v1:CalendarEntry xsi:type = "v1:AppointmentEvent">
+                            <v1:SimpleTemporalExpression>
+                                <v1:timePeriod>
+                                    <v1:startUTCOffset>+10:00</v1:startUTCOffset>
+                                    <v1:endUTCOffset>+10:00</v1:endUTCOffset>
+                                    <v1:startDateTime>2012-04-17T18:00:00.0Z</v1:startDateTime>
+                                    <v1:endDateTime>2012-04-17T20:00:00.0Z</v1:endDateTime>
+                                </v1:timePeriod>
+                            </v1:SimpleTemporalExpression>
+                            <v1:appointmentSlotType>PM</v1:appointmentSlotType>
+                        </v1:CalendarEntry>
+                    </v1:ProjectElementHasCalendarEntry>
+                    <v1:ProjectElementHasCalendarEntry>
+                        <v1:relationshipType>AvailableSlot</v1:relationshipType>
+                        <v1:CalendarEntry xsi:type = "v1:AppointmentEvent">
+                            <v1:SimpleTemporalExpression>
+                                <v1:timePeriod>
+                                    <v1:startUTCOffset>+10:00</v1:startUTCOffset>
+                                    <v1:endUTCOffset>+10:00</v1:endUTCOffset>
+                                    <v1:startDateTime>2012-04-18T18:00:00.0Z</v1:startDateTime>
+                                    <v1:endDateTime>2012-04-18T20:00:00.0Z</v1:endDateTime>
+                                </v1:timePeriod>
+                            </v1:SimpleTemporalExpression>
+                            <v1:appointmentSlotType>PM</v1:appointmentSlotType>
+                        </v1:CalendarEntry>
+                    </v1:ProjectElementHasCalendarEntry>
+                    <v1:ProjectElementHasCalendarEntry>
+                        <v1:relationshipType>AvailableSlot</v1:relationshipType>
+                        <v1:CalendarEntry xsi:type = "v1:AppointmentEvent">
+                            <v1:SimpleTemporalExpression>
+                                <v1:timePeriod>
+                                    <v1:startUTCOffset>+10:00</v1:startUTCOffset>
+                                    <v1:endUTCOffset>+10:00</v1:endUTCOffset>
+                                    <v1:startDateTime>2012-04-19T18:00:00.0Z</v1:startDateTime>
+                                    <v1:endDateTime>2012-04-19T20:00:00.0Z</v1:endDateTime>
+                                </v1:timePeriod>
+                            </v1:SimpleTemporalExpression>
+                            <v1:appointmentSlotType>PM</v1:appointmentSlotType>
+                        </v1:CalendarEntry>
+                    </v1:ProjectElementHasCalendarEntry>
+                    <v1:ProjectElementHasCalendarEntry>
+                        <v1:relationshipType>AvailableSlot</v1:relationshipType>
+                        <v1:CalendarEntry xsi:type = "v1:AppointmentEvent">
+                            <v1:SimpleTemporalExpression>
+                                <v1:timePeriod>
+                                    <v1:startUTCOffset>+10:00</v1:startUTCOffset>
+                                    <v1:endUTCOffset>+10:00</v1:endUTCOffset>
+                                    <v1:startDateTime>2012-04-20T18:00:00.0Z</v1:startDateTime>
+                                    <v1:endDateTime>2012-04-20T20:00:00.0Z</v1:endDateTime>
+                                </v1:timePeriod>
+                            </v1:SimpleTemporalExpression>
+                            <v1:appointmentSlotType>PM</v1:appointmentSlotType>
+                        </v1:CalendarEntry>
+                    </v1:ProjectElementHasCalendarEntry>
+                    <v1:ProjectElementHasCalendarEntry>
+                        <v1:relationshipType>AvailableSlot</v1:relationshipType>
+                        <v1:CalendarEntry xsi:type = "v1:AppointmentEvent">
+                            <v1:SimpleTemporalExpression>
+                                <v1:timePeriod>
+                                    <v1:startUTCOffset>+10:00</v1:startUTCOffset>
+                                    <v1:endUTCOffset>+10:00</v1:endUTCOffset>
+                                    <v1:startDateTime>2012-04-21T18:00:00.0Z</v1:startDateTime>
+                                    <v1:endDateTime>2012-04-21T20:00:00.0Z</v1:endDateTime>
+                                </v1:timePeriod>
+                            </v1:SimpleTemporalExpression>
+                            <v1:appointmentSlotType>PM</v1:appointmentSlotType>
+                        </v1:CalendarEntry>
+                    </v1:ProjectElementHasCalendarEntry>
+                    <v1:ProjectElementHasCalendarEntry>
+                        <v1:relationshipType>AvailableSlot</v1:relationshipType>
+                        <v1:CalendarEntry xsi:type = "v1:AppointmentEvent">
+                            <v1:SimpleTemporalExpression>
+                                <v1:timePeriod>
+                                    <v1:startUTCOffset>+10:00</v1:startUTCOffset>
+                                    <v1:endUTCOffset>+10:00</v1:endUTCOffset>
+                                    <v1:startDateTime>2012-04-22T18:00:00.0Z</v1:startDateTime>
+                                    <v1:endDateTime>2012-04-22T20:00:00.0Z</v1:endDateTime>
+                                </v1:timePeriod>
+                            </v1:SimpleTemporalExpression>
+                            <v1:appointmentSlotType>PM</v1:appointmentSlotType>
+                        </v1:CalendarEntry>
+                    </v1:ProjectElementHasCalendarEntry>
+                    <v1:ProjectElementHasCalendarEntry>
+                        <v1:relationshipType>AvailableSlot</v1:relationshipType>
+                        <v1:CalendarEntry xsi:type = "v1:AppointmentEvent">
+                            <v1:SimpleTemporalExpression>
+                                <v1:timePeriod>
+                                    <v1:startUTCOffset>+10:00</v1:startUTCOffset>
+                                    <v1:endUTCOffset>+10:00</v1:endUTCOffset>
+                                    <v1:startDateTime>2012-04-23T18:00:00.0Z</v1:startDateTime>
+                                    <v1:endDateTime>2012-04-23T20:00:00.0Z</v1:endDateTime>
+                                </v1:timePeriod>
+                            </v1:SimpleTemporalExpression>
+                            <v1:appointmentSlotType>PM</v1:appointmentSlotType>
+                        </v1:CalendarEntry>
+                    </v1:ProjectElementHasCalendarEntry>
+                    <v1:ProjectElementHasCalendarEntry>
+                        <v1:relationshipType>AvailableSlot</v1:relationshipType>
+                        <v1:CalendarEntry xsi:type = "v1:AppointmentEvent">
+                            <v1:SimpleTemporalExpression>
+                                <v1:timePeriod>
+                                    <v1:startUTCOffset>+10:00</v1:startUTCOffset>
+                                    <v1:endUTCOffset>+10:00</v1:endUTCOffset>
+                                    <v1:startDateTime>2012-04-24T18:00:00.0Z</v1:startDateTime>
+                                    <v1:endDateTime>2012-04-24T20:00:00.0Z</v1:endDateTime>
+                                </v1:timePeriod>
+                            </v1:SimpleTemporalExpression>
+                            <v1:appointmentSlotType>PM</v1:appointmentSlotType>
+                        </v1:CalendarEntry>
+                    </v1:ProjectElementHasCalendarEntry>
+                    <v1:ProjectElementHasCalendarEntry>
+                        <v1:relationshipType>AvailableSlot</v1:relationshipType>
+                        <v1:CalendarEntry xsi:type = "v1:AppointmentEvent">
+                            <v1:SimpleTemporalExpression>
+                                <v1:timePeriod>
+                                    <v1:startUTCOffset>+10:00</v1:startUTCOffset>
+                                    <v1:endUTCOffset>+10:00</v1:endUTCOffset>
+                                    <v1:startDateTime>2012-04-25T18:00:00.0Z</v1:startDateTime>
+                                    <v1:endDateTime>2012-04-25T20:00:00.0Z</v1:endDateTime>
+                                </v1:timePeriod>
+                            </v1:SimpleTemporalExpression>
+                            <v1:appointmentSlotType>PM</v1:appointmentSlotType>
+                        </v1:CalendarEntry>
+                    </v1:ProjectElementHasCalendarEntry>
+                    <v1:ProjectElementHasCalendarEntry>
+                        <v1:relationshipType>AvailableSlot</v1:relationshipType>
+                        <v1:CalendarEntry xsi:type = "v1:AppointmentEvent">
+                            <v1:SimpleTemporalExpression>
+                                <v1:timePeriod>
+                                    <v1:startUTCOffset>+10:00</v1:startUTCOffset>
+                                    <v1:endUTCOffset>+10:00</v1:endUTCOffset>
+                                    <v1:startDateTime>2012-04-26T18:00:00.0Z</v1:startDateTime>
+                                    <v1:endDateTime>2012-04-26T20:00:00.0Z</v1:endDateTime>
+                                </v1:timePeriod>
+                            </v1:SimpleTemporalExpression>
+                            <v1:appointmentSlotType>PM</v1:appointmentSlotType>
+                        </v1:CalendarEntry>
+                    </v1:ProjectElementHasCalendarEntry>
+                    <v1:ProjectElementHasCalendarEntry>
+                        <v1:relationshipType>AvailableSlot</v1:relationshipType>
+                        <v1:CalendarEntry xsi:type = "v1:AppointmentEvent">
+                            <v1:SimpleTemporalExpression>
+                                <v1:timePeriod>
+                                    <v1:startUTCOffset>+10:00</v1:startUTCOffset>
+                                    <v1:endUTCOffset>+10:00</v1:endUTCOffset>
+                                    <v1:startDateTime>2012-04-27T18:00:00.0Z</v1:startDateTime>
+                                    <v1:endDateTime>2012-04-27T20:00:00.0Z</v1:endDateTime>
+                                </v1:timePeriod>
+                            </v1:SimpleTemporalExpression>
+                            <v1:appointmentSlotType>PM</v1:appointmentSlotType>
+                        </v1:CalendarEntry>
+                    </v1:ProjectElementHasCalendarEntry>
+                    <v1:ProjectElementHasCalendarEntry>
+                        <v1:relationshipType>AvailableSlot</v1:relationshipType>
+                        <v1:CalendarEntry xsi:type = "v1:AppointmentEvent">
+                            <v1:SimpleTemporalExpression>
+                                <v1:timePeriod>
+                                    <v1:startUTCOffset>+10:00</v1:startUTCOffset>
+                                    <v1:endUTCOffset>+10:00</v1:endUTCOffset>
+                                    <v1:startDateTime>2012-04-28T18:00:00.0Z</v1:startDateTime>
+                                    <v1:endDateTime>2012-04-28T20:00:00.0Z</v1:endDateTime>
+                                </v1:timePeriod>
+                            </v1:SimpleTemporalExpression>
+                            <v1:appointmentSlotType>PM</v1:appointmentSlotType>
+                        </v1:CalendarEntry>
+                    </v1:ProjectElementHasCalendarEntry>
+                    <v1:ProjectElementHasCalendarEntry>
+                        <v1:relationshipType>AvailableSlot</v1:relationshipType>
+                        <v1:CalendarEntry xsi:type = "v1:AppointmentEvent">
+                            <v1:SimpleTemporalExpression>
+                                <v1:timePeriod>
+                                    <v1:startUTCOffset>+10:00</v1:startUTCOffset>
+                                    <v1:endUTCOffset>+10:00</v1:endUTCOffset>
+                                    <v1:startDateTime>2012-04-29T18:00:00.0Z</v1:startDateTime>
+                                    <v1:endDateTime>2012-04-29T20:00:00.0Z</v1:endDateTime>
+                                </v1:timePeriod>
+                            </v1:SimpleTemporalExpression>
+                            <v1:appointmentSlotType>PM</v1:appointmentSlotType>
+                        </v1:CalendarEntry>
+                    </v1:ProjectElementHasCalendarEntry>
+                    <v1:ProjectElementHasCalendarEntry>
+                        <v1:relationshipType>AvailableSlot</v1:relationshipType>
+                        <v1:CalendarEntry xsi:type = "v1:AppointmentEvent">
+                            <v1:SimpleTemporalExpression>
+                                <v1:timePeriod>
+                                    <v1:startUTCOffset>+10:00</v1:startUTCOffset>
+                                    <v1:endUTCOffset>+10:00</v1:endUTCOffset>
+                                    <v1:startDateTime>2012-04-30T18:00:00.0Z</v1:startDateTime>
+                                    <v1:endDateTime>2012-04-30T20:00:00.0Z</v1:endDateTime>
+                                </v1:timePeriod>
+                            </v1:SimpleTemporalExpression>
+                            <v1:appointmentSlotType>PM</v1:appointmentSlotType>
+                        </v1:CalendarEntry>
+                    </v1:ProjectElementHasCalendarEntry>
+                    <v1:ProjectElementHasCalendarEntry>
+                        <v1:relationshipType>AvailableSlot</v1:relationshipType>
+                        <v1:CalendarEntry xsi:type = "v1:AppointmentEvent">
+                            <v1:SimpleTemporalExpression>
+                                <v1:timePeriod>
+                                    <v1:startUTCOffset>+10:00</v1:startUTCOffset>
+                                    <v1:endUTCOffset>+10:00</v1:endUTCOffset>
+                                    <v1:startDateTime>2012-05-01T18:00:00.0Z</v1:startDateTime>
+                                    <v1:endDateTime>2012-05-01T20:00:00.0Z</v1:endDateTime>
+                                </v1:timePeriod>
+                            </v1:SimpleTemporalExpression>
+                            <v1:appointmentSlotType>PM</v1:appointmentSlotType>
+                        </v1:CalendarEntry>
+                    </v1:ProjectElementHasCalendarEntry>
+                    <v1:ProjectElementHasCalendarEntry>
+                        <v1:relationshipType>AvailableSlot</v1:relationshipType>
+                        <v1:CalendarEntry xsi:type = "v1:AppointmentEvent">
+                            <v1:SimpleTemporalExpression>
+                                <v1:timePeriod>
+                                    <v1:startUTCOffset>+10:00</v1:startUTCOffset>
+                                    <v1:endUTCOffset>+10:00</v1:endUTCOffset>
+                                    <v1:startDateTime>2012-05-02T18:00:00.0Z</v1:startDateTime>
+                                    <v1:endDateTime>2012-05-02T20:00:00.0Z</v1:endDateTime>
+                                </v1:timePeriod>
+                            </v1:SimpleTemporalExpression>
+                            <v1:appointmentSlotType>PM</v1:appointmentSlotType>
+                        </v1:CalendarEntry>
+                    </v1:ProjectElementHasCalendarEntry>
+                    <v1:ProjectElementHasCalendarEntry>
+                        <v1:relationshipType>AvailableSlot</v1:relationshipType>
+                        <v1:CalendarEntry xsi:type = "v1:AppointmentEvent">
+                            <v1:SimpleTemporalExpression>
+                                <v1:timePeriod>
+                                    <v1:startUTCOffset>+10:00</v1:startUTCOffset>
+                                    <v1:endUTCOffset>+10:00</v1:endUTCOffset>
+                                    <v1:startDateTime>2012-05-03T18:00:00.0Z</v1:startDateTime>
+                                    <v1:endDateTime>2012-05-03T20:00:00.0Z</v1:endDateTime>
+                                </v1:timePeriod>
+                            </v1:SimpleTemporalExpression>
+                            <v1:appointmentSlotType>PM</v1:appointmentSlotType>
+                        </v1:CalendarEntry>
+                    </v1:ProjectElementHasCalendarEntry>
+                    <v1:ProjectElementHasCalendarEntry>
+                        <v1:relationshipType>AvailableSlot</v1:relationshipType>
+                        <v1:CalendarEntry xsi:type = "v1:AppointmentEvent">
+                            <v1:SimpleTemporalExpression>
+                                <v1:timePeriod>
+                                    <v1:startUTCOffset>+10:00</v1:startUTCOffset>
+                                    <v1:endUTCOffset>+10:00</v1:endUTCOffset>
+                                    <v1:startDateTime>2012-05-04T18:00:00.0Z</v1:startDateTime>
+                                    <v1:endDateTime>2012-05-04T20:00:00.0Z</v1:endDateTime>
+                                </v1:timePeriod>
+                            </v1:SimpleTemporalExpression>
+                            <v1:appointmentSlotType>PM</v1:appointmentSlotType>
+                        </v1:CalendarEntry>
+                    </v1:ProjectElementHasCalendarEntry>
+                    <v1:ProjectElementHasCalendarEntry>
+                        <v1:relationshipType>AvailableSlot</v1:relationshipType>
+                        <v1:CalendarEntry xsi:type = "v1:AppointmentEvent">
+                            <v1:SimpleTemporalExpression>
+                                <v1:timePeriod>
+                                    <v1:startUTCOffset>+10:00</v1:startUTCOffset>
+                                    <v1:endUTCOffset>+10:00</v1:endUTCOffset>
+                                    <v1:startDateTime>2012-05-05T18:00:00.0Z</v1:startDateTime>
+                                    <v1:endDateTime>2012-05-05T20:00:00.0Z</v1:endDateTime>
+                                </v1:timePeriod>
+                            </v1:SimpleTemporalExpression>
+                            <v1:appointmentSlotType>PM</v1:appointmentSlotType>
+                        </v1:CalendarEntry>
+                    </v1:ProjectElementHasCalendarEntry>
+                    <v1:ProjectElementHasCalendarEntry>
+                        <v1:relationshipType>AvailableSlot</v1:relationshipType>
+                        <v1:CalendarEntry xsi:type = "v1:AppointmentEvent">
+                            <v1:SimpleTemporalExpression>
+                                <v1:timePeriod>
+                                    <v1:startUTCOffset>+10:00</v1:startUTCOffset>
+                                    <v1:endUTCOffset>+10:00</v1:endUTCOffset>
+                                    <v1:startDateTime>2012-05-06T18:00:00.0Z</v1:startDateTime>
+                                    <v1:endDateTime>2012-05-06T20:00:00.0Z</v1:endDateTime>
+                                </v1:timePeriod>
+                            </v1:SimpleTemporalExpression>
+                            <v1:appointmentSlotType>PM</v1:appointmentSlotType>
+                        </v1:CalendarEntry>
+                    </v1:ProjectElementHasCalendarEntry>
+                    <v1:ProjectElementHasCalendarEntry>
+                        <v1:relationshipType>AvailableSlot</v1:relationshipType>
+                        <v1:CalendarEntry xsi:type = "v1:AppointmentEvent">
+                            <v1:SimpleTemporalExpression>
+                                <v1:timePeriod>
+                                    <v1:startUTCOffset>+10:00</v1:startUTCOffset>
+                                    <v1:endUTCOffset>+10:00</v1:endUTCOffset>
+                                    <v1:startDateTime>2012-05-07T18:00:00.0Z</v1:startDateTime>
+                                    <v1:endDateTime>2012-05-07T20:00:00.0Z</v1:endDateTime>
+                                </v1:timePeriod>
+                            </v1:SimpleTemporalExpression>
+                            <v1:appointmentSlotType>PM</v1:appointmentSlotType>
+                        </v1:CalendarEntry>
+                    </v1:ProjectElementHasCalendarEntry>
+                    <v1:ProjectElementHasCalendarEntry>
+                        <v1:relationshipType>AvailableSlot</v1:relationshipType>
+                        <v1:CalendarEntry xsi:type = "v1:AppointmentEvent">
+                            <v1:SimpleTemporalExpression>
+                                <v1:timePeriod>
+                                    <v1:startUTCOffset>+10:00</v1:startUTCOffset>
+                                    <v1:endUTCOffset>+10:00</v1:endUTCOffset>
+                                    <v1:startDateTime>2012-05-08T18:00:00.0Z</v1:startDateTime>
+                                    <v1:endDateTime>2012-05-08T20:00:00.0Z</v1:endDateTime>
+                                </v1:timePeriod>
+                            </v1:SimpleTemporalExpression>
+                            <v1:appointmentSlotType>PM</v1:appointmentSlotType>
+                        </v1:CalendarEntry>
+                    </v1:ProjectElementHasCalendarEntry>
+                    <v1:ProjectElementHasCalendarEntry>
+                        <v1:relationshipType>AvailableSlot</v1:relationshipType>
+                        <v1:CalendarEntry xsi:type = "v1:AppointmentEvent">
+                            <v1:SimpleTemporalExpression>
+                                <v1:timePeriod>
+                                    <v1:startUTCOffset>+10:00</v1:startUTCOffset>
+                                    <v1:endUTCOffset>+10:00</v1:endUTCOffset>
+                                    <v1:startDateTime>2012-05-09T18:00:00.0Z</v1:startDateTime>
+                                    <v1:endDateTime>2012-05-09T20:00:00.0Z</v1:endDateTime>
+                                </v1:timePeriod>
+                            </v1:SimpleTemporalExpression>
+                            <v1:appointmentSlotType>PM</v1:appointmentSlotType>
+                        </v1:CalendarEntry>
+                    </v1:ProjectElementHasCalendarEntry>
+                    <v1:ProjectElementHasCalendarEntry>
+                        <v1:relationshipType>AvailableSlot</v1:relationshipType>
+                        <v1:CalendarEntry xsi:type = "v1:AppointmentEvent">
+                            <v1:SimpleTemporalExpression>
+                                <v1:timePeriod>
+                                    <v1:startUTCOffset>+10:00</v1:startUTCOffset>
+                                    <v1:endUTCOffset>+10:00</v1:endUTCOffset>
+                                    <v1:startDateTime>2012-05-10T18:00:00.0Z</v1:startDateTime>
+                                    <v1:endDateTime>2012-05-10T20:00:00.0Z</v1:endDateTime>
+                                </v1:timePeriod>
+                            </v1:SimpleTemporalExpression>
+                            <v1:appointmentSlotType>PM</v1:appointmentSlotType>
+                        </v1:CalendarEntry>
+                    </v1:ProjectElementHasCalendarEntry>
+                    <v1:wbsNr>APT000000000308</v1:wbsNr>
+                    <v1:WBSElementSpec>
+                        <v1:type>APPT</v1:type>
+                    </v1:WBSElementSpec>
+                </ma:WorkForceEvent>
+                <ma:CARequiredFlag>true</ma:CARequiredFlag>
+            </queryWorkForceAvailabilityResponse>
+        </ns1:queryWorkForceAvailabilityResponse>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
