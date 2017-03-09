@@ -2984,3 +2984,19 @@ Sandbox.define('/QueryAppointment', 'POST', function(req, res) {
     // Send the response body.
     res.render('getQueryAppointment');
 })
+
+Sandbox.define('/RescheduleAppointment','POST', function(req, res) {
+    // Check the request, make sure it is a compatible type
+    if (!req.is('application/xml')) {
+        return res.send(400, 'Invalid content type, expected application/xml');
+    }
+    
+    // Set the type of response, sets the content type.
+    res.type('application/xml');
+    
+    // Set the status code of the response.
+    res.status(200);
+    
+    // Send the response body.
+    res.render('postRescheduleAppointment');
+})
