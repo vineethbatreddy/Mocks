@@ -2985,7 +2985,7 @@ Sandbox.soap('/RescheduleAppointment','', function(req, res) {
     res.render('');
 })
 
-Sandbox.define('/QueryAppointment','GET', function(req, res) {
+Sandbox.define('/QueryAppointment', 'POST', function(req, res) {
     // Check the request, make sure it is a compatible type
     if (!req.is('application/xml')) {
         return res.send(400, 'Invalid content type, expected application/xml');
