@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-16"?>
+
+<SOAP-ENV:Envelope
+    xmlns:SOAP-ENV = "http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:xsd = "http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ma = "http://www.telstra.com/FieldWorkOrderManagement/ISL-FWOM/v1/FieldWorkOrderManagement.xsd"
+    xmlns:v1 = "http://www.telstra.com/OCIM/v1">
+    <SOAP-ENV:Header>
+        <ma:SoapHeader xmlns:ma = "http://www.telstra.com/FieldWorkOrderManagement/ISL-FWOM/v1/FieldWorkOrderManagement.xsd">
+            <ma:transactionID>bzKLHaTQPC5SNkVuGCNkCXzku5A</ma:transactionID>
+            <ma:transactionName>QueryWorkforceAvailabilityResponse</ma:transactionName>
+            <ma:sourceSystem>ISL-FUL</ma:sourceSystem>
+            <ma:targetSystem>CCB-RCRM SOC</ma:targetSystem>
+            <ma:serviceVersion>1.0</ma:serviceVersion>
+            <ma:timeStamp>2013-10-28T01:52:31.479Z</ma:timeStamp>
+            <ma:role></ma:role>
+        </ma:SoapHeader>
+    </SOAP-ENV:Header>
+    <SOAP-ENV:Body>
+        <ns1:queryWorkForceAvailabilityResponse xmlns:ns1 = "http://www.telstra.com/FieldWorkOrderManagement/ISL-FWOM/v1/FieldWorkOrderManagement.wsdl">
+            <queryWorkForceAvailabilityResponse>
+                <ma:WorkForceEvent>
+                    <v1:ProjectElementHasCalendarEntry>
+                        <v1:relationshipType>AvailableSlot</v1:relationshipType>
+                        <v1:CalendarEntry xsi:type = "v1:AppointmentEvent">
+                            <v1:SimpleTemporalExpression>
+                                <v1:timePeriod>
+                                    <v1:startUTCOffset>+10:00</v1:startUTCOffset>
+                                    <v1:endUTCOffset>+10:00</v1:endUTCOffset>
+                                    <v1:startDateTime>2012-04-16T18:00:00.0Z</v1:startDateTime>
+                                    <v1:endDateTime>2012-04-16T20:00:00.0Z</v1:endDateTime>
+                                </v1:timePeriod>
+                            </v1:SimpleTemporalExpression>
+                            <v1:appointmentSlotType>PM</v1:appointmentSlotType>
+                        </v1:CalendarEntry>
+                    </v1:ProjectElementHasCalendarEntry>
+                    <v1:ProjectElementHasCalendarEntry>
+                        <v1:relationshipType>AvailableSlot</v1:relationshipType>
+                        <v1:CalendarEntry xsi:type = "v1:AppointmentEvent">
+                            <v1:SimpleTemporalExpression>
+                                <v1:timePeriod>
+                                    <v1:startUTCOffset>+10:00</v1:startUTCOffset>
+                                    <v1:endUTCOffset>+10:00</v1:endUTCOffset>
+                                    <v1:startDateTime>2012-04-17T18:00:00.0Z</v1:startDateTime>
+                                    <v1:endDateTime>2012-04-17T20:00:00.0Z</v1:endDateTime>
+                                </v1:timePeriod>
+                            </v1:SimpleTemporalExpression>
+                            <v1:appointmentSlotType>PM</v1:appointmentSlotType>
+                        </v1:CalendarEntry>
+                    </v1:ProjectElementHasCalendarEntry>
+                    <v1:WBSElementSpec>
+                        <v1:type>APPT</v1:type>
+                    </v1:WBSElementSpec>
+                    <v1:Involves>
+                        <v1:AppointmentStatusForStatusOfEvent>
+                            <v1:SubStatus>
+                                <v1:Type>
+                                    <v1:name>MSD-IN-AREA</v1:name>
+                                    <v1:description>The appointment is incomplete due to a network event.</v1:description>
+                                    <v1:StatusEquivalence>
+                                        <v1:name>INCOMPLETE</v1:name>
+                                    </v1:StatusEquivalence>
+                                </v1:Type>
+                                <v1:AppointmentStatusChangeEventForChangeTo>
+                                    <v1:Type>
+                                        <v1:name>DELAY</v1:name>
+                                    </v1:Type>
+                                    <v1:AppointmentStatusChangeEventCharacteristicForCharacteristicOfChangeEvent>
+                                        <v1:name>ChangeInitiator</v1:name>
+                                        <v1:AppointmentStatusChangeEventCharacteristicValueForValueOfCharacteristic>
+                                            <v1:value>NBN</v1:value>
+                                        </v1:AppointmentStatusChangeEventCharacteristicValueForValueOfCharacteristic>
+                                    </v1:AppointmentStatusChangeEventCharacteristicForCharacteristicOfChangeEvent>
+                                    <v1:AppointmentStatusChangeEventCharacteristicForCharacteristicOfChangeEvent>
+                                        <v1:name>WorkforceID</v1:name>
+                                        <v1:AppointmentStatusChangeEventCharacteristicValueForValueOfCharacteristic>
+                                            <v1:value>NBN</v1:value>
+                                        </v1:AppointmentStatusChangeEventCharacteristicValueForValueOfCharacteristic>
+                                    </v1:AppointmentStatusChangeEventCharacteristicForCharacteristicOfChangeEvent>
+                                </v1:AppointmentStatusChangeEventForChangeTo>
+                            </v1:SubStatus>
+                        </v1:AppointmentStatusForStatusOfEvent>
+                    </v1:Involves>
+                </ma:WorkForceEvent>
+                <ma:CARequiredFlag>true</ma:CARequiredFlag>
+            </queryWorkForceAvailabilityResponse>
+        </ns1:queryWorkForceAvailabilityResponse>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
