@@ -2582,7 +2582,7 @@ Sandbox.define('/destroy/dop/security/rest/loginservice', 'POST', function(req, 
     res.send('{"access_token": "lFYpKM2LkokcsbzQFKfsMTiPeFcA", "expires_in": "3599"}');
 })
 
-Sandbox.define('/manageCustomer','POST', function(req, res){
+Sandbox.define('/destroy/manageCustomer', 'POST', function(req, res){
     // Set the type of response, sets the content type.
     res.type(Sandbox.config.default_response_type);
     
