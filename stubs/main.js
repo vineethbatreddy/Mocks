@@ -2919,7 +2919,7 @@ Sandbox.define('/ping','GET', function(req, res){
     });
 })
 
-Sandbox.define('/MockService','POST', function(req, res){
+Sandbox.define('/destroy/MockService', 'POST', function(req, res){
     res.type(Sandbox.config.default_response_type);
     
     res.status(Sandbox.config.http_accepted_status_code);
