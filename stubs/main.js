@@ -7,7 +7,7 @@
 
 
 
-Sandbox.define('/search/{masterId}', 'GET', function(req, res){
+Sandbox.define('/destroy/search/{masterId}', 'GET', function(req, res){
     // Set the type of response, sets the content type.
     res.type(Sandbox.config.default_response_type);
     
@@ -2910,7 +2910,7 @@ Sandbox.define('/destroy/getNBNSQStub', 'GET', function(req, res){
     );
 })
 
-Sandbox.define('/ping','GET', function(req, res){
+Sandbox.define('/destroy/ping', 'GET', function(req, res){
     res.type(Sandbox.config.default_response_type);
     res.status(Sandbox.config.http_success_status_code);
     res.json({
