@@ -2595,7 +2595,7 @@ Sandbox.define('/destroy/manageCustomer', 'POST', function(req, res){
     });
 })
 
-Sandbox.define('/orderorchestration/rest/ordermanager/orders','POST', function(req, res){
+Sandbox.define('/destroy/orderorchestration/rest/ordermanager/orders', 'POST', function(req, res){
     // Set the type of response, sets the content type.
     res.type(Sandbox.config.default_response_type);
     
