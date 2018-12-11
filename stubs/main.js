@@ -2969,7 +2969,7 @@ Sandbox.define('/numberManagement/fnn','GET', function(req, res){
     });
 })
 
-Sandbox.define('/QueryAppointment', 'POST', function(req, res){
+Sandbox.define('/destroy/QueryAppointment', 'POST', function(req, res){
     // Check the request, make sure it is a compatible type
     if (!req.is(Sandbox.config.xml_response_type)) {
         return res.send(400, 'Invalid content type, expected application/xml');
