@@ -2941,7 +2941,7 @@ Sandbox.define('/destroy/MockService', 'PUT', function(req, res){
 
 
 
-Sandbox.define('/numberManagement/fnn','GET', function(req, res){
+Sandbox.define('/destroy/numberManagement/fnn', 'GET', function(req, res){
     // Set the type of response, sets the content type.
     res.type(Sandbox.config.default_response_type);
     
