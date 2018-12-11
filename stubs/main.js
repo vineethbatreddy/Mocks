@@ -2608,7 +2608,7 @@ Sandbox.define('/orderorchestration/rest/ordermanager/orders','POST', function(r
     });
 })
 
-Sandbox.define('/managebilling/rest/validate', 'POST', function(req, res){
+Sandbox.define('/destroy/managebilling/rest/validate', 'POST', function(req, res){
     // Check the request, make sure it is a compatible type
     if (!req.is('application/json')) {
         return res.send(Sandbox.config.http_unsuccessful_status_code, 'Invalid content type, expected application/json');
