@@ -1,0 +1,20 @@
+<soap:Envelope>
+  <soap:Header />
+  <soap:Body>
+      <body>
+        <addressDetails>
+          <maxNumberResults>2000</maxNumberResults>
+          <NMIAttached>Y</NMIAttached>
+          <address>
+            <streetNumber>2</streetNumber>
+            <streetName>Barkly</streetName>
+            <streetType>Street</streetType>
+            <suburb>Ararat</suburb>
+            <postCode>3377</postCode>
+            <state>VIC</state>
+          </address>
+        </addressDetails>
+      </body>
+    </queryRequest>
+  </soap:Body>
+</soap:Envelope>
