@@ -296,7 +296,7 @@ Sandbox.define('/closeout', 'POST', function(req, res){
 
 Sandbox.define('/DERRSave','POST', function(req, res){
     // set sample response
-    var responseXML = '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:der="http://chedha.net/cap/app/sfdc/evs/DERData"><soapenv:Header/><soapenv:Body><der:saveDERResponse></der:saveDERResponse></soapenv:Body></soapenv:Envelope>';
+    var responseXML = '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:der="http://chedha.net/cap/app/sfdc/evs/DERData"><soapenv:Header/><soapenv:Body><der:saveDERResponse>SUCCESS</der:saveDERResponse></soapenv:Body></soapenv:Envelope>';
     
     // set response type and status
     res.status(200);
