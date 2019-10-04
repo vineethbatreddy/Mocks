@@ -305,20 +305,13 @@ Sandbox.define('/DERRSave','POST', function(req, res){
     res.send(responseXML);
 })
 
-Sandbox.define('/DERRQuery','POST', function(req, res) {
-    // Check the request, make sure it is a compatible type
-    if (!req.is('application/xml')) {
-        return res.send(400, 'Invalid content type, expected application/xml');
-    }
+Sandbox.define('/DERRQuery','POST', function(req, res){
+    // set sample response
+    var responseXML = '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:der="http://chedha.net/cap/app/sfdc/evs/DERData"><soapenv:Header/><soapenv:Body><der:saveDERResponse>SUCCESS</der:saveDERResponse></soapenv:Body></soapenv:Envelope>';
     
-    // Set the type of response, sets the content type.
-    res.type('application/json');
-    
-    // Set the status code of the response.
+    // set response type and status
     res.status(200);
+    res.type('xml');
     
-    // Send the response body.
-    res.json({
-        "status": "ok"
-    });
+    res.send(responseXML);
 })
