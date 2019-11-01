@@ -298,6 +298,8 @@ Sandbox.define('/DERRSave','POST', function(req, res){
     // set sample response
     var responseXML = '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:der="http://chedha.net/cap/app/sfdc/evs/DERData"><soapenv:Header/><soapenv:Body><der:saveDERResponse>SUCCESS</der:saveDERResponse></soapenv:Body></soapenv:Envelope>';
     
+    var fault = '<?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Header xmlns:der="http://chedha.net/cap/app/sfdc/evs/DERData" /><soap:Body xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Fault><faultcode>app.sfdc:251</faultcode><faultstring>SaveDER Request validation failed. Following elements are required</faultstring><detail><der:derDataFault xmlns:der="http://chedha.net/cap/app/sfdc/evs/DERData"><der:source>evs/app/sfdc/DERData_1.0&gt;&gt;saveDER</der:source><der:errorCode>app.sfdc:251</der:errorCode><der:description>SaveDER Request validation failed. Following elements are required</der:description><der:details><message>Mandatory element(jobnumber) is not passed in the request</message></der:details><der:faultInstanceId>632aacbb-649e-4605-b08e-0da28d8a321a</der:faultInstanceId><der:propertySet /><der:timestamp>2019-10-17T17:20:12.209+11:00</der:timestamp></der:derDataFault></detail></soap:Fault></soap:Body></soapenv:Envelope>';
+    
     // set response type and status
     res.status(200);
     res.type('xml');
