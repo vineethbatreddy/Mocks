@@ -323,17 +323,14 @@ Sandbox.define('/DERRQuery','POST', function(req, res){
     
     
     // set response type and status
-    if(nmi=='62038113805') {
+    if (nmi == '61029992489') {
         res.status(500);
         res.type('xml');
         res.send('');
-    }
-    else {
+    } else {
         res.status(200);
         res.type('xml');
-        
+    
         res.send(responseXML);
     }
-    
-    
 })
