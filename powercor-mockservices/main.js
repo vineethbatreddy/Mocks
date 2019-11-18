@@ -328,9 +328,9 @@ Sandbox.define('/DERRQuery','POST', function(req, res){
         res.type('xml');
         res.send('');
     } else {
-        res.status(200);
+        res.status(500);
         res.type('xml');
     
-        res.send(responseXML);
+        res.send('');
     }
 })
