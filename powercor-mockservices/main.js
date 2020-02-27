@@ -375,41 +375,24 @@ Sandbox.define('/DERRQuery','POST', function(req, res){
 })
 
 Sandbox.define('/LGCA','POST', function(req, res) {
-    // Check the request, make sure it is a compatible type
+    //variables
+    var nmi = '';
+    var response61025063957 = '{"response_Type": "getOutcome","comments": "response_Type can be getOutcome or getTransformer. GetTransformer will always return null outcome.","name": "SPA-117982","nmi": "61025063957","approved_Capacity": 30,"outcome": "Reduced Capacity","outcome_Reason": "Network Augmentation Required","supply_Point_ID": "34563639","feeder": "WPD031""feeder_Category": "somevalue","installed_Capacity": 78.000000,"transformer_Name": "GRAMMAR NORMAN 2 Trans 1","transformer_Description": "some description","transformer_Name_Plate_Rating": 300,"transformer_ID": "20298652","transformer_Rating": 315,"transformer_Phase": "3","parent_Transformer_Name": "KIEFELL P13 ISO Trans 1","parent_Transformer_Name_Plate_Rating": 300"parent_Installed_Capacity": 90.000000,"substation_ID": "substation123""substation_Urban_Code": "Rural","substation_Fire_Area": "true"}';
+    
+    // Set the type of response, sets the content type.
+    res.type('application/json');
+	
+	// Check the request, make sure it is a compatible type
     if (!req.is('application/json')) {
         return res.send(400, 'Invalid content type, expected application/json');
     }
     
-    // Set the type of response, sets the content type.
-    res.type('application/json');
-    
-    // Set the status code of the response.
-    res.status(200);
-    
-    // Send the response body.
-    res.json({
-        "response_Type": "getOutcome",
-        "comments": "response_Type can be getOutcome or getTransformer. GetTransformer will always return null outcome.",
-        "name": "SPA-117982",
-        "nmi": "61025063957",
-        "approved_Capacity": 30,
-        "outcome": "Reduced Capacity",
-        "outcome_Reason": "Network Augmentation Required",
-        "supply_Point_ID": "34563639",
-        "feeder": "WPD031",
-        "feeder_Category": "somevalue",
-        "installed_Capacity": 78.000000,
-        "transformer_Name": "GRAMMAR NORMAN 2 Trans 1",
-        "transformer_Description": "some description",
-        "transformer_Name_Plate_Rating": 300,
-        "transformer_ID": "20298652",
-        "transformer_Rating": 315,
-        "transformer_Phase": "3",
-        "parent_Transformer_Name": "KIEFELL P13 ISO Trans 1",
-        "parent_Transformer_Name_Plate_Rating": 300,
-        "parent_Installed_Capacity": 90.000000,
-        "substation_ID": "substation123",
-        "substation_Urban_Code": "Rural",
-        "substation_Fire_Area": "true"
-    });
+    if(req.get("nmi") == '61025063957'){
+        nmi = req.get("nmi").text();
+        res.status(200);
+        res.send(response61025063957);
+    } else {
+        res.status(500);
+        res.send('');
+    }
 })
