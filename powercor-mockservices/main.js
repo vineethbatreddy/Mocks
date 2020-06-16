@@ -376,6 +376,7 @@ Sandbox.define('/DERRQuery','POST', function(req, res){
 
 Sandbox.define('/LGCATransformer', 'POST', function(req, res){
     //variables
+    var nmi = '';
     var response61021111111 = '{"existing_export_capacity":null,"feeder":null,"nmi":"61025952703","parent_transformer_name":null,"parent_transformer_name_plate_rating":null,"response_type":"get_transformer","result":"N","substation_fire_area":null,"substation_id":null,"substation_urban_code":null,"supply_point_id":null,"transformer_id":null,"transformer_name":null,"transformer_name_plate_rating":null,"transformer_phase":null,"transformer_rating":null}';
     
     // Set the type of response, sets the content type.
