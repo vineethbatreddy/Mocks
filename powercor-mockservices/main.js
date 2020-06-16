@@ -387,8 +387,8 @@ Sandbox.define('/LGCA/transformer', 'POST', function(req, res){
         return res.send(400, 'Invalid content type, expected application/json');
     }
     
-    if (req.get("nmi") == '61021111111') {
-        nmi = req.get("nmi").text();
+    if (req.body.nmi == '61021111111') {
+        nmi = req.body.nmi;
         res.status(200);
         res.send(response61021111111);
     } else {
