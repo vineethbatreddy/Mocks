@@ -376,17 +376,10 @@ Sandbox.define('/DERRQuery','POST', function(req, res){
 
 Sandbox.define('/LGCATransformer', 'POST', function(req, res){
     //variables
-    var nmi = '';
     var response61021111111 = '{"existing_export_capacity":null,"feeder":null,"nmi":"61025952703","parent_transformer_name":null,"parent_transformer_name_plate_rating":null,"response_type":"get_transformer","result":"N","substation_fire_area":null,"substation_id":null,"substation_urban_code":null,"supply_point_id":null,"transformer_id":null,"transformer_name":null,"transformer_name_plate_rating":null,"transformer_phase":null,"transformer_rating":null}';
     
     // Set the type of response, sets the content type.
     res.type('application/json');
-    
-    // Check the request, make sure it is a compatible type
-    if (!req.is('application/json')) {
-        return res.send(400, 'Invalid content type, expected application/json');
-    }
-    
     if (req.body.nmi == '61021111111') {
         res.status(200);
         res.json(response61021111111);
