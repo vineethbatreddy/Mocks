@@ -397,20 +397,25 @@ Sandbox.define('/LGCA/transformer', 'POST', function(req, res){
     }
 })
 
-Sandbox.define('/LGCA/outcome','POST', function(req, res) {
+Sandbox.define('/LGCA/outcome','POST', function(req, res){
+    //variables
+    var nmi = '';
+    var response61021111111 = '{"nmi":"62030316513","outcome_reason":"all_tests_passed","requested_capacity":5,"response_type":"get_outcome","result":"Y","spa_number":null,"supply_point_gis_id":"31751064","transformer_id":"86225613","upper_capacity_limit":5.0}';
+    
+    // Set the type of response, sets the content type.
+    res.type('application/json');
+    
     // Check the request, make sure it is a compatible type
     if (!req.is('application/json')) {
         return res.send(400, 'Invalid content type, expected application/json');
     }
     
-    // Set the type of response, sets the content type.
-    res.type('application/json');
-    
-    // Set the status code of the response.
-    res.status(200);
-    
-    // Send the response body.
-    res.json({
-        "status": "ok"
-    });
+    if (req.get("nmi") == '61021111111') {
+        nmi = req.get("nmi").text();
+        res.status(200);
+        res.send(response61021111111);
+    } else {
+        res.status(500);
+        res.send('');
+    }
 })
