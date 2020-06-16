@@ -390,7 +390,7 @@ Sandbox.define('/LGCA/transformer', 'POST', function(req, res){
     if (req.body.nmi == '61021111111') {
         nmi = req.body.nmi;
         res.status(200);
-        res.send(response61021111111);
+        res.json(response61021111111);
     } else {
         res.status(500);
         res.send('');
