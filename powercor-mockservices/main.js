@@ -398,11 +398,6 @@ Sandbox.define('/LGCAOutcome', 'POST', function(req, res){
     // Set the type of response, sets the content type.
     res.type('application/json');
     
-    // Check the request, make sure it is a compatible type
-    if (!req.is('application/json')) {
-        return res.send(400, 'Invalid content type, expected application/json');
-    }
-    
     if (req.body.nmi == '61021111111') {
         nmi = req.body.nmi;
         res.status(200);
