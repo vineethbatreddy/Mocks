@@ -434,7 +434,7 @@ Sandbox.define('/LGCAOutcome', 'POST', function(req, res){
     }
 })
 
-Sandbox.define('/service-proxy/usb/evs/app/sfdc/RetrieveMeterData_2.0?host=spnu-fmw','GET', function(req, res) {
+Sandbox.define('/service-proxy/usb/evs/app/sfdc/RetrieveMeterData_2.0', 'GET', function(req, res) {
     // Check the request, make sure it is a compatible type
     if (!req.is('text/plain')) {
         return res.send(400, 'Invalid content type, expected text/plain');
